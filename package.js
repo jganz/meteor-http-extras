@@ -1,8 +1,8 @@
 Package.describe({
-  name: "aldeed:http",
+  name: "jganz:http",
   summary: "Improves the core HTTP package",
-  version: "0.2.2",
-  git: "https://github.com/aldeed/meteor-http-extras"
+  version: "0.2.3",
+  git: "https://github.com/jganz/meteor-http-extras"
 });
 
 Npm.depends({request: "2.47.0"});
@@ -21,7 +21,7 @@ Package.on_test(function (api) {
   api.use('underscore');
   api.use('random');
   api.use('jquery', 'client');
-  api.use(['http', 'aldeed:http', 'test-helpers'], ['client', 'server']);
+  api.use(['http', 'jganz:http', 'test-helpers'], ['client', 'server']);
 
   api.add_files('test_responder.js', 'server');
   api.add_files('http-extras-tests.js', ['client', 'server']);
